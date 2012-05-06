@@ -8,6 +8,22 @@ Your Assignment
 
 1. Download and install PostgreSQL (see show notes)
 2. Clone, fork this repo and copy the config/database.yml.sample to config/database.yml, edit with values
+
+Panda Level
+-----------
+
+1. Add 2 more TV shows to the seeds file
+2. When I run `ruby watchman.rb`, Have it output all TV shows
+
+Tiger Level
+-----------
+
+1. Ask the user what day they want to watch shows?
+2. Output only the shows matching that day of the week
+
+Eagle (Advanced) Level
+---------------------- 
+
 4. Create a table (using the migrations) which represents a hobby of yours: Fishing, Sports, Cooking, etc.
 3. When I run ruby watchman.rb
 	* Fill the table with 5 records (Recipe.create)
@@ -23,11 +39,6 @@ What would you like to learn more about?
 
 #[editor: if I enter "Tacos" I'll see the Tacos recipe. If I enter nutella, I see "sorry Dave, I can't do that right now"]
 ```
-Extra Credit
-------------
-
-1. Remove the delete_all statements from db/seed.rb, but don't grow the number of records each time
-2. Add validation on your models
 
 Show Notes
 -----------
