@@ -9,7 +9,6 @@ class CreateAuthors < ActiveRecord::Migration
 
     change_table :books do |t|
       t.references :author
-      t.timestamps
     end
   end
 end
