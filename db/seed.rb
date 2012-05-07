@@ -1,5 +1,7 @@
 # Cleaning Out
+
 Author.delete_all
+Book.delete_all
 
 brust = Author.create({
   :first_name => 'Steven',
@@ -12,8 +14,6 @@ crais = Author.create({
   :last_name => 'Crais',
   :birthdate => '06201953'
 })
-
-Book.delete_all
 
 Book.create({
   :name => 'Jhereg',
