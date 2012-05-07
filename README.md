@@ -8,8 +8,9 @@ Your Assignment
 
 1. Download and install PostgreSQL (see show notes)
 2. Clone, fork this repo and copy the config/database.yml.sample to config/database.yml, edit with values
-4. Create a table (using the migrations) which represents a hobby of yours: Fishing, Sports, Cooking, etc.
-3. When I run ruby watchman.rb
+
+3. Create a table (using the migrations) which represents a hobby of yours: Fishing, Sports, Cooking, etc.
+4. When I run ruby watchman.rb
 	* Fill the table with 5 records (Recipe.create)
 	* Have it show me all the records, with a nicely implemented to_s method
   * Ask me (the user) what I want to show. Example, if you have Recipe with :name and :ingredients:
@@ -23,6 +24,7 @@ What would you like to learn more about?
 
 #[editor: if I enter "Tacos" I'll see the Tacos recipe. If I enter nutella, I see "sorry Dave, I can't do that right now"]
 ```
+
 Extra Credit
 ------------
 

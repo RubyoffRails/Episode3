@@ -2,9 +2,7 @@ require 'pg'
 require 'active_record'
 require 'yaml'
 
-connection_details = YAML::load(File.open('config/database.yml'))
-
-
+connection_details = YAML::load(File.open('./config/database.yml'))
 
 # Setup out connection details
 ActiveRecord::Base.establish_connection(connection_details.merge({database: 'postgres', schema_search_path: 'public'}))
