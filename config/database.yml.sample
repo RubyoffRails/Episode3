@@ -1,3 +1,4 @@
+host: 'localhost'
 adapter: 'postgresql'
 database: 'watchman'
 username:  XXXXXXX
