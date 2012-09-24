@@ -18,3 +18,6 @@ _yardoc
 doc/
 
 config/database.yml
+.idea
+postgres
+sqlite3

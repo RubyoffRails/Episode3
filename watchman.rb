@@ -13,3 +13,17 @@ Network.all.each do |network|
 		puts show
 	end	
 end
+
+def find_shows
+  puts "What day do you want to watch shows ?"
+  dow = gets.chomp
+
+  shows = Show.where(:day_of_week => dow)
+
+  puts "Airing on #{dow}:"
+  shows.each do |show|
+    puts show
+  end
+end
+
+find_shows

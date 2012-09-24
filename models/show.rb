@@ -4,6 +4,6 @@ class Show < ActiveRecord::Base
 	validates_presence_of :name
 
 	def to_s
-		"#{name} airs at #{hour_of_day}:#{day_of_week}:00 on #{network} "
+		"#{name} airs at #{hour_of_day}:00 #{day_of_week} on #{network} "
 	end
 end
