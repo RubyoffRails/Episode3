@@ -1,0 +1,138 @@
+SELECT version();
+SELect version();
+SELECT 2 + 2;
+\h
+CREATE TABLE weather {
+city varchar(80),
+temp_lo int, -- low temperature
+temp_hi int, -- high temperature
+prcp real, -- precipitation
+date date
+};
+CREATE TABLE weather (
+city varchar(80),
+temp_lo int, -- low temperature
+temp_hi int, -- high temperature
+prcp real, -- precipitation
+date date
+);
+weather
+;
+SHOW weather
+;
+TABLE weather;
+CREATE TABLE cities (
+name varchar(80),
+location point
+);
+SHOW cities;
+TABLE cities;
+INSERT INTO weather VALUES ('San Francisco', 46, 50, 0.25, '1994-11-27');
+INSERT INTO cities VALUES ('San Francisco', '(-194.0, 53.0)');
+INSERT INTO weather VALUES ('San Francisco', 43, 57, 0.0, '1994-11-29');
+INSERT INTO weather (date, city, temp_hi, temp_lo) VALUES ('1994-11-29', 'Haywrd', 54, 37);
+SHOW weather
+;
+TABLE weather
+;
+SELECT * FROM weather;
+SHOW weather(2)
+;
+SELECT 2 FROM weather;
+SELECT city, (temp_hi+temp_lo)/2 AS temp_avg, date FROM weather;
+SELECT * FROM weather WHERE temp_avg >= 45;
+SELECT * FROM weather WHERE temp_lo >= 45;
+SELECT * FROM weather ORDER BY city;
+SELECT DISTINCT city FROM weather;
+SELECT DISTINCT city FROM weather ORDER BY city;
+SELECT * FROM weather, cities WHERE city = name;
+SELECT * FROM weather INNER JOIN cities ON (weather.city = cities.name);
+SELECT * FROM weather LEFT OUTER JOIN cities ON (weather.city = cities.name);
+/q
+\q
+Show
+Show.all
+help
+help
+"help"
+exit
+quit
+;
+Show;
+Show.all;
+\h
+SHOW
+Show
+;
+Show Shows;
+Show ALL in SHows
+;
+\list
+SELECT all FROM watchman
+;
+SELECT * FROM watchman
+;
+SELECT all FROM watchman
+;
+SELECT * FROM watchman;
+SELECT *
+;
+\d
+\table
+SHOW TABLES
+;
+\d
+\l
+\d table
+\d watchman
+\d+ table
+\d+ watchman
+\d+ postgres
+SELECT * FROM SHOW;
+SELECT * FROM SHOWS;
+SELECT * FROM show;
+SELECT * FROM imformation_schema.tables
+;
+SELECT * FROM imformation_schema.tables
+;
+/dy
+/dt
+;
+/dt * *
+;
+\dt
+\dt information_schema
+exit
+quit
+\q
+\d
+\t
+\l
+\d
+\l
+\dt
+\dl
+\ld
+\?
+\dn
+\dt
+\du
+\dn+
+\d
+\l
+\?
+\l
+\c watchman
+\d
+SHOW * FROM shows
+;
+\td
+\dt
+\dT
+SELECT * FROM shows
+;
+SELECT * FROM networks
+;
+\td\d shows
+\d shows
+\s networks
