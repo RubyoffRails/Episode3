@@ -1,6 +1,0 @@
-host: 'localhost'
-adapter: 'postgresql'
-database: 'watchman'
-username:  XXXXXXX
-encoding: 'utf8'
-pool: 5
