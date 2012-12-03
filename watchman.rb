@@ -15,12 +15,12 @@ Network.all.each do |network|
 end
 
 def find_show
-  dow = { Monday: 1, Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5,  Saturday: 6, Sunday: 7 }
+  dow = { 1 => "Monday", 2 => "Tuesday", 3 => "Wednesday", 4 => "Thursday", 5 => "Friday", 6 => "Saturday", 7 => "Sunday" }
   puts "Pick a day of week: Use 1 for Monday ... 7 for Sunday"
-  user_pick = dow.key ( gets.to_i )
+  user_pick = dow.fetch( gets.to_i ) { puts "sorry, not found" }
 
   Network.all.each do |network|
-    network.shows.each { |show| puts show if show.day_of_week == user_pick.to_s }
+    network.shows.each { |show| puts show if show.day_of_week == user_pick }
   end
 
 end
