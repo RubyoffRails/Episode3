@@ -26,8 +26,8 @@ Eagle (Advanced) Level
 
 4. Create a table (using the migrations) which represents a hobby of yours: Fishing, Sports, Cooking, etc.
 3. When I run ruby watchman.rb
-	* Fill the table with 5 records (Recipe.create)
-	* Have it show me all the records, with a nicely implemented to_s method
+  * Fill the table with 5 records (Recipe.create)
+  * Have it show me all the records, with a nicely implemented to_s method
   * Ask me (the user) what I want to show. Example, if you have Recipe with :name and :ingredients:
 
 ```
