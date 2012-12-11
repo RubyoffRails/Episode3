@@ -13,7 +13,7 @@ Panda Level
 -----------
 
 1. Add 2 more TV shows to the seeds file
-2. When I run `ruby watchman.rb`, Have it output all TV shows
+2. When I run `ruby watchman.rb`, have it output all TV shows
 
 Tiger Level
 -----------
