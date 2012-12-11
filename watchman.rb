@@ -31,17 +31,32 @@ Show.all.each do |show|
 	end
 end
 
-if answer.empty?
-	puts 'No day was provided. No shows for you!'
-	exit
-end
-
-puts "Shows for #{answer}:"
-
 if shows.size != 0
 	shows.each do |s|
 		puts "#{s.name} at #{s.hour_of_day} on #{s.network}"
 	end
 else
-	puts 'None'
+	puts 'No shows found.'
 end
+
+# output all my knitting projects
+puts
+puts "My current knitting projects: "
+Project.all.each do |project|
+	puts project
+end
+
+puts
+puts "Which project would you like to see details for?"
+answer = gets.chomp
+
+counter = 0
+Project.all.each do |proj|
+	if proj.name == answer
+		counter += 1
+		puts proj
+		break
+	end
+end
+
+puts 'Sorry, project not found.' if counter == 0
