@@ -5,11 +5,11 @@ require "./db/setup"
 Dir.glob('./models/*').each { |r| require r}
 require "./db/seed"
 
-puts "There are #{Show.count} in the database"
+puts "What day do you want to watch tv?"
+user_input = gets.chomp
 
-Network.all.each do |network|
-  puts "Shows airing on #{network}"
-  network.shows.each do |show|
-    puts show
+Show.all.each  do  |s|
+  if user_input.casecmp(s.day_of_week.to_s) == 0
+    puts s
   end
 end
