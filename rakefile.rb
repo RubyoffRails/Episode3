@@ -13,5 +13,5 @@ RSpec::Core::RakeTask.new do |t|
 end
 
 task :say_hi do
-	puts "hi"
+  puts "hi"
 end

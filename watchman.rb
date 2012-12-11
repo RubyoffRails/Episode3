@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
-
 require "./db/setup"
+
 Dir.glob('./models/*').each { |r| require r}
 require "./db/seed"
 

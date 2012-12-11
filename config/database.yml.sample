@@ -1,6 +1,6 @@
 host: 'localhost'
 adapter: 'postgresql'
 database: 'watchman'
-username:  XXXXXXX
+username:  'russell'
 encoding: 'utf8'
 pool: 5
