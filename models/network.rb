@@ -1,7 +1,7 @@
 class Network < ActiveRecord::Base
-	has_many :shows
+  has_many :shows
 
-	def to_s
-		name
-	end
+  def to_s
+    name
+  end
 end
