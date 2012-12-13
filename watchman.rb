@@ -28,17 +28,18 @@ puts "Now choose one and enter it below to find out more about it."
 print "~>"
 
 input = gets.chomp.capitalize
-sport = Sport.where(name: input)
+sport = Sport.where(name: input).first
 
-while sport.empty?
+while sport.nil?
   puts "Sorry, I can't do that right now."
-  puts "~>"
+  puts "Try another sport..."
+  print "~>"
   input = gets.chomp.capitalize
-  sport = Sport.where(name: input)
+  sport = Sport.where(name: input).first
 end
 
 puts
-puts "A not so fun fact about #{sport.first.name}:"
+puts "A not so fun fact about #{sport.name}:"
 puts
 
 Sport.where(name: input).each do |sport|
