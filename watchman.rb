@@ -35,3 +35,16 @@ wrecks = Wreck.order('depth ASC')
 wrecks.all.each do |wreck|
   puts wreck
 end
+
+puts "\nWhich wreck would you like to know more?"
+wreck_cli = gets
+
+wrecks = Wreck.where("name = ?", wreck_cli.chomp)
+
+unless wrecks.empty?
+  wrecks.each do |wreck|
+    puts wreck.full_to_s
+  end
+else
+  puts "Sorry - there was no match."
+end
