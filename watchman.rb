@@ -27,3 +27,11 @@ unless shows.empty?
 else
   puts "No shows on that day"
 end
+
+puts "\n\nWrecks:\n"
+
+wrecks = Wreck.order('depth ASC')
+
+wrecks.all.each do |wreck|
+  puts wreck
+end
