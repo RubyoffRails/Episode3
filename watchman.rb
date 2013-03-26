@@ -21,3 +21,15 @@ end
 if count == 0
 	puts "no shows air on #{day_of_week}"
 end
+
+puts "There are #{Recipe.count} recipes in the database"
+Recipe.all.each do |recipe|
+	puts "#{recipe}"
+end
+puts "What would you like to make?"
+dish = gets.chomp
+Recipe.all.each do |recipe|
+	if recipe.dish == dish
+	  puts "#{recipe}"
+	end
+end
