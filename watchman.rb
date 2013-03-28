@@ -19,6 +19,8 @@ Network.all.each do |network|
 	end
 end
 puts "no shows air on #{day_of_week}" unless show_in_entered_day_of_week
+puts "\n\n\n\n"
+
 
 puts "These are the all the dishes in the database :"
 Recipe.all.each do |recipe|
@@ -29,6 +31,7 @@ dish = gets.chomp
 recipe_exists = false
 Recipe.all.each do |recipe|
 	if recipe.dish == dish
+	  puts "This is how you make #{dish} :"
 	  puts "#{recipe.instructions}"
 	  recipe_exists = true
 	end
