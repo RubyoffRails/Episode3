@@ -1,11 +1,12 @@
 # Cleaning Out
-Network.delete_all
-Show.delete_all
-amc = Network.create(name: "AMC")
-nbc = Network.create(name: "NBC")
-fox = Network.create(name: "FOX")
-fx = Network.create(name: "FX")
-Show.create(name: "Mad Men", day_of_week: "Sunday", hour_of_day: 22, network: amc)
-Show.create(name: "Community", day_of_week: "Thursday", hour_of_day: 20, network: nbc)
-Show.create(name: "Bones", day_of_week: "Monday", hour_of_day: 20, network: fox)
-Show.create(name: "Archer", day_of_week: "Thursday", hour_of_day: 22, network: fx)
+Publisher.delete_all
+Game.delete_all
+ffg = Publisher.create(name: "Fantasy Flight Games")
+slg = Publisher.create(name: "Sirlin Games")
+zmg = Publisher.create(name: "Z-Man Games")
+
+Game.create(name: "Mansions of Madness", players_min: 2, players_max: 5, designer: "Corey Konieczka", publisher: ffg)
+Game.create(name: "Android: Infiltration", players_min: 2, players_max: 6, designer: "Donald X. Vaccarino", publisher: ffg)
+Game.create(name: "Puzzle Strike", players_min: 2, players_max: 4, designer: "David Sirlin", publisher: slg)
+Game.create(name: "Flash Duel", players_min: 1, players_max: 5, designer: "David Sirlin", publisher: slg)
+Game.create(name: "Pandemic", players_min: 2, players_max: 4, designer: "Matt Leacock", publisher: zmg)
