@@ -31,12 +31,14 @@ while true
     break
   end
 
-  unless WEEK_DAY.keys.include?(answer)
-    puts "No such day: '#{answer}', please select again!"
+
+  selected_day = WEEK_DAY[answer]
+
+  unless selected_day
+    puts "Invalid selection: '#{answer}', please select again!"
     next
   end
 
-  selected_day = WEEK_DAY[answer]
   shows = Show.where(day_of_week: selected_day)
 
   if shows.empty?
