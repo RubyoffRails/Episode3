@@ -18,31 +18,31 @@ WEEK_DAY = {
 def select_day
   puts "-" * 80
   puts "Which week day do you want watch TV shows?"
-  puts "1: Monday, 2: Tuesday, 3: Wednesday, 4: Thursday, 5: Friday, 6: Saturday, 7: Sunday or Q: Quit"
-  STDOUT.write "Select a day [1~7 or Q]:"
+  puts  WEEK_DAY.map {|k, v| "#{k}: #{v}"}.join(', ') + " or Q: Quit"
+  print "Select a day [1~7 or Q]:"
   gets.chomp
 end
 
 while true
-  day = select_day
+  answer = select_day
 
-  if day.upcase == 'Q'
+  if answer.upcase == 'Q'
     puts "Goodbye!"
     break
   end
 
-  unless day.match(/^[1-7]$/)
-    puts "No such day: '#{day}', please select again!"
+  unless WEEK_DAY.keys.include?(answer)
+    puts "No such day: '#{answer}', please select again!"
     next
   end
 
-  sday = WEEK_DAY[day]
-  shows = Show.where(day_of_week: sday)
+  selected_day = WEEK_DAY[answer]
+  shows = Show.where(day_of_week: selected_day)
 
   if shows.empty?
-    puts "No shows on #{sday}"
+    puts "No shows on #{selected_day}"
   else
-    puts "Shows on #{sday}:"
+    puts "Shows on #{selected_day}:"
     shows.each {|show| puts show}
   end
 
