@@ -5,47 +5,23 @@ require "./db/setup"
 Dir.glob('./models/*').each { |r| require r }
 require "./db/seed"
 
-WEEK_DAY = {
-  '1' => "Monday",
-  '2' => "Tuesday",
-  '3' => "Wednesday",
-  '4' => "Thursday",
-  '5' => "Friday",
-  '6' => "Saturday",
-  '7' => "Sunday"
-}
-
-def select_day
-  puts "-" * 80
-  puts "Which week day do you want watch TV shows?"
-  puts  WEEK_DAY.map {|k, v| "#{k}: #{v}"}.join(', ') + " or Q: Quit"
-  print "Select a day [1~7 or Q]:"
-  gets.chomp
+def horizontal_line
+  '-' * 80
 end
+puts "All authors in our database:"
 
-while true
-  answer = select_day
+puts horizontal_line
+Author.all.each {|author| puts author}
+puts horizontal_line
 
-  if answer.upcase == 'Q'
-    puts "Goodbye!"
-    break
-  end
+puts "Which author are you interested in?"
+name = gets.chomp
 
+author = Author.where(name: name).first
 
-  selected_day = WEEK_DAY[answer]
-
-  unless selected_day
-    puts "Invalid selection: '#{answer}', please select again!"
-    next
-  end
-
-  shows = Show.where(day_of_week: selected_day)
-
-  if shows.empty?
-    puts "No shows on #{selected_day}"
-  else
-    puts "Shows on #{selected_day}:"
-    shows.each {|show| puts show}
-  end
-
+if author
+  puts "Books written by #{name}:"
+  author.books.each_with_index {|book, i| puts "#{i+1}. #{book.title}"}
+else
+  puts "Sorry, we don't have any book written by #{name}."
 end
