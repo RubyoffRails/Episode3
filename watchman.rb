@@ -13,3 +13,9 @@ Network.all.each do |network|
 		puts show
 	end	
 end
+
+puts
+puts "The TV shows are:"
+Show.all.each do | show |
+  puts show
+end
