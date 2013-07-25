@@ -7,15 +7,29 @@ require "./db/seed"
 
 puts "There are #{Show.count} in the database"
 
-Network.all.each do |network|
-	puts "Shows airing on #{network}"
-	network.shows.each do |show|
-		puts show
-	end	
+def get_shows
+  puts "Enter a day of the week to see the shows:"
+  day = gets.chomp.downcase.capitalize
+  unless Show.where(day_of_week: day).empty?
+    Show.where(day_of_week: day).each { |s| puts s }
+  else
+    puts "There are no shows for #{day}"
+  end
+  continue
 end
 
-puts
-puts "The TV shows are:"
-Show.all.each do | show |
-  puts show
+def continue
+  puts "Do you want to continue searching? (Y/N)"
+  answer = gets.chomp.upcase
+  if answer == 'Y'
+    get_shows
+  elsif answer == 'N'
+    exit
+  else
+    puts "Unknown answer..."
+    continue
+  end
 end
+
+
+get_shows
