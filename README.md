@@ -1,4 +1,4 @@
-Episode3: Watchman -- Datastores in YML and Postgres
+ Episode3: Watchman -- Datastores in YML and Postgres
 ====================================================
 
 Storing data in Postgres, with migrations, outside of Rails
