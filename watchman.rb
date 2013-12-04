@@ -30,7 +30,16 @@ Recipe.all.each do |recipe|
 end
 puts "\n"
 puts "What would you like to learn more about:"
-name = gets.capitalize.gsub("\n",'')
-Recipe.where(name: name).each do |recipe|
-  puts recipe
+name = gets.downcase.gsub("\n",'')
+puts "\n"
+
+recipes = Recipe.where(" lower(name) = ?", name)
+if recipes.empty?
+  puts "I'm sorry dave I can't do that for you"
+else
+  puts "Recipe Found"
+  recipes.each do |recipe|
+    puts recipe
+  end
+  puts "Enjoy!"
 end
