@@ -21,3 +21,16 @@ puts "Searching for shows on #{day}"
 Show.where(day_of_week: day).each do |show|
   puts show
 end
+
+puts "\n"
+puts "Now lets cook some dinner"
+puts "Here are all the recipes"
+Recipe.all.each do |recipe|
+  puts recipe
+end
+puts "\n"
+puts "What would you like to learn more about:"
+name = gets.capitalize.gsub("\n",'')
+Recipe.where(name: name).each do |recipe|
+  puts recipe
+end
