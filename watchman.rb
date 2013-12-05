@@ -33,7 +33,7 @@ puts "What would you like to learn more about:"
 name = gets.downcase.gsub("\n",'')
 puts "\n"
 
-recipes = Recipe.where(" lower(name) = ?", name)
+recipes = Recipe.search(name)
 if recipes.empty?
   puts "I'm sorry dave I can't do that for you"
 else
