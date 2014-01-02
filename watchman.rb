@@ -25,9 +25,9 @@ Network.all.each do |network|
 end
 
 puts "Here are all the recipes"
-Recipe.all.each { |recipe| recipe.to_s }
+Recipe.all.each { |recipe| puts recipe }
 
 puts "What recipe would you like to learn more about?"
 recipe_search = STDIN.gets.chomp.capitalize
 recipe_result = Recipe.where(name: recipe_search)
-recipe_result.empty? ? puts("Sorry we cannot find that recipe") : recipe_result.each { |recipe| recipe.to_s }
+recipe_result.empty? ? puts("Sorry we cannot find that recipe") : recipe_result.each { |recipe| puts recipe }
