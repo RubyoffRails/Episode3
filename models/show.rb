@@ -6,4 +6,6 @@ class Show < ActiveRecord::Base
 	def to_s
 		"#{name} airs at #{hour_of_day}:#{day_of_week}:00 on #{network} "
 	end
+
+	
 end
