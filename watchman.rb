@@ -5,18 +5,22 @@ require "./db/setup"
 Dir.glob('./models/*').each { |r| require r}
 require "./db/seed"
 
+i=0
+
 puts "***********************"
 puts "* Welcome to WATCHMAN *"
 puts "***********************"
-puts "There are #{Show.count} in the database"
+puts "There are #{Review.count} reviews in the database:"
 puts ""
-puts "What day would you like to watch shows?"
+Review.all.each do |review|
+  i+=1
+  puts "#{review.movie}"
+end
+puts "What movie review would you like to see?"
 print "> "
 
-day_of_week = gets.chomp.downcase
+movie_selection = gets.chomp.downcase
 
-Network.all.each do |network|
-  network.shows.each do |show|
-    puts show if show.day_of_week.downcase == day_of_week
-  end
-end
+my_selection = Review.all.select { |review| review.movie.downcase == movie_selection }
+puts "Oops... we don't have a review for #{movie_selection} yet." if my_selection.empty?
+my_selection.each { |review| puts review }
