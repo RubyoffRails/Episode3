@@ -14,3 +14,12 @@ Show.create(name: "Banshee", day_of_week: "Friday", hour_of_day: 22, network: ci
 Show.create(name: "Suits", day_of_week: "Thursday", hour_of_day: 21, network: usa)
 Show.create(name: "House of Cards", day_of_week: "Friday", hour_of_day: 20, network: netflix)
 Show.create(name: "House of Lies", day_of_week: "Sunday", hour_of_day: 22, network: sho)
+
+# Beer.create('Nova Shin', 'Brazil', 'Foo', 'Pilsner', 4, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ...')
+# Beer.create('Tusker', 'Kenya', 'Kenya Breweries', 'Lager', 4, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ...')
+# Beer.create('Kiwi', 'New Zealand', 'Foo', 'Lager', 4, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ...')
+# Beer.create('VB', 'Kenya', 'Foo', 'Lager', 1, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ...')
+# Beer.create('Tiger', 'Singapore', 'Foo', 'Lager', 3)
+# Beer.create('Sapora', 'Japan', 'Foo', 'Lager', 2, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ...')
+# Beer.create('Castle', 'South Africa', 'Foo', 'Lager', 5, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ...')
+# Beer.create('Windhoek', 'Namibia', 'Namibia Breweries', 'Lager', 2, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ...')
