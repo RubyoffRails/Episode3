@@ -1,4 +1,4 @@
-class Beer ActiveRecord::Migration
+class CreateBeers < ActiveRecord::Migration
 
 	def change
 		create_table :beers do |t|
@@ -6,8 +6,8 @@ class Beer ActiveRecord::Migration
 			t.string :country
 			t.string :brewer
 			t.string :kind_of
-			t.float :rating
-			t.text :summary
+			t.integer :rating
+			t.string :summary
 			t.timestamps
 		end
 	end
