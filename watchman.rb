@@ -31,3 +31,14 @@ puts "----------------------"
 Beer.all.each do |beer|
   puts beer
 end
+
+puts "\n\nWhat would you like to learn more about?"
+input = gets.chomp.titlecase
+
+beer = Beer.find_by_name(input)
+if beer
+	puts "Did you know?\n"
+	puts beer.summarize
+else
+	puts "Sorry, I can't do that right now."
+end
