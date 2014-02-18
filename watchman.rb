@@ -21,8 +21,8 @@ puts "----------------------"
 puts "On which day would you like to watch TV?"
 input = gets.chomp.titlecase
 puts "On #{input.titlecase}s, you can watch:\n"
-shows_list = Show.by_day(input)
-	shows_list.each do |show|
+show_list = Show.find_all_by_day_of_week(input)
+	show_list.each do |show|
 		puts "#{show.name} at #{show.hour_of_day}:00 on #{show.network}"
 	end
 
@@ -38,7 +38,7 @@ input = gets.chomp.titlecase
 beer = Beer.find_by_name(input)
 if beer
 	puts "Did you know?\n"
-	puts beer.summarize
+  puts beer.summarize
 else
 	puts "Sorry, I can't do that right now."
 end
