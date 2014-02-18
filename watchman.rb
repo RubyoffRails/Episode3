@@ -21,7 +21,7 @@ puts "----------------------"
 puts "On which day would you like to watch TV?"
 input = gets.chomp.titlecase
 puts "On #{input.titlecase}s, you can watch:\n"
-show_list = Show.find_all_by_day_of_week(input)
+show_list = Show.where(day_of_week: "#{input}")
 	show_list.each do |show|
 		puts "#{show.name} at #{show.hour_of_day}:00 on #{show.network}"
 	end
